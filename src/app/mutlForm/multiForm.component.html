@@ -1,0 +1,18 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+   
+    <div *ngFor="let step of steps; let index = index; let last = last;">
+        <div *ngIf="currentStep==index">
+            <ng-template>{{ step.label }}</ng-template>
+            <formly-form [form]="form.at(index)" [model]="model" [fields]="step.fields" [options]="options">
+            </formly-form>
+        </div>
+
+      
+    </div>
+    <div>
+        <button *ngIf="currentStep !== 0" class="btn btn-primary" type="button" (click)="prevStep(currentStep)">Back</button>
+        <button *ngIf="currentStep!==steps.length-1" class="btn btn-primary" type="button" [disabled]="!form.at(currentStep).valid" (click)="nextStep(currentStep)">Next</button>
+        <button *ngIf="currentStep==steps.length-1" class="btn btn-primary" [disabled]="!form.valid" type="submit">Submit</button>
+    </div>
+   
+</form>

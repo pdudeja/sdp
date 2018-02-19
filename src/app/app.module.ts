@@ -13,17 +13,21 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {FormlyModule} from '@ngx-formly/core';
 import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
-
+import { NgTableComponent, NgTableFilteringDirective, NgTablePagingDirective, NgTableSortingDirective } from 'ng2-table/ng2-table';
+import { PaginationModule } from 'ngx-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
     DataTableComponent,
-    MultiFormComponent
+    MultiFormComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PaginationModule.forRoot(),
     Ng2TableModule,
+    
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyBootstrapModule,

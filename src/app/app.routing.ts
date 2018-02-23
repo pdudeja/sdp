@@ -5,10 +5,12 @@ import { AppComponent } from './app.component';
 
 import   { DataTableComponent } from './dataTable/dataTable.component';
 import { MultiFormComponent } from './mutlForm/multiForm.component';
+import { FilterComponent } from './filter/filter.component';
 const routes: Routes = [
   { path: '', component: DataTableComponent },
 
-  { path: 'multi', component: MultiFormComponent }
+  { path: 'multi', component: MultiFormComponent },
+  { path: 'filter', component: FilterComponent }
 ];
 
 @NgModule({

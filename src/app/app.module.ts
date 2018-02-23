@@ -15,11 +15,16 @@ import {FormlyModule} from '@ngx-formly/core';
 import {FormlyBootstrapModule} from '@ngx-formly/bootstrap';
 import { NgTableComponent, NgTableFilteringDirective, NgTablePagingDirective, NgTableSortingDirective } from 'ng2-table/ng2-table';
 import { PaginationModule } from 'ngx-bootstrap';
+
+import { FilterComponent } from './filter/filter.component';
+import { SortPipe } from './filter/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     DataTableComponent,
     MultiFormComponent,
+    FilterComponent,
+    SortPipe
     
   ],
   imports: [
